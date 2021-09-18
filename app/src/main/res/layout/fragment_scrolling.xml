@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.fragments.MovieDetailsFragment">
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tvDetailsMovieName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLength="30"
+            android:maxLines="1"
+            android:layout_marginTop="10dp"
+            android:singleLine="true"
+            android:text="sdsdadadDD"
+            android:textSize="21sp"
+            android:layout_marginLeft="10dp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintVertical_bias="0.506"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <ImageView
+            android:id="@+id/ivMovieImage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvDetailsMovieName" />
+
+
+        <TextView
+            android:id="@+id/tvDetailsMovieHeadLine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:layout_marginTop="10dp"
+            android:text="sdsdadadDD"
+            android:textSize="18sp"
+            android:layout_marginLeft="10dp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@+id/ivMovieImage"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintVertical_bias="0.506"/>
+
+
+        <TextView
+            android:id="@+id/tvDetailsMovieSummary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:layout_marginTop="10dp"
+            android:text="sdsdadadDD"
+            android:textSize="15sp"
+            android:layout_marginLeft="10dp"
+            android:textStyle="normal"
+            app:layout_constraintTop_toBottomOf="@+id/tvDetailsMovieHeadLine"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintVertical_bias="0.506"/>
+
+        <TextView
+            android:id="@+id/tvDetailsPublicationLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:layout_marginTop="10dp"
+            android:text="Publication date :"
+            android:textSize="15sp"
+            android:layout_marginLeft="10dp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@+id/tvDetailsMovieSummary"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintVertical_bias="0.506"/>
+
+        <TextView
+            android:id="@+id/tvDetailsPublication"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:layout_marginTop="10dp"
+            android:text=""
+            android:textSize="15sp"
+            android:layout_marginLeft="10dp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@+id/tvDetailsMovieSummary"
+            app:layout_constraintStart_toEndOf="@+id/tvDetailsPublicationLabel"
+            app:layout_constraintVertical_bias="0.506"/>
+
+
+
+        <TextView
+            android:id="@+id/tvDetailsOpenLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:layout_marginTop="10dp"
+            android:text="Opening date :"
+            android:textSize="15sp"
+            android:layout_marginLeft="10dp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@+id/tvDetailsPublicationLabel"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintVertical_bias="0.506"/>
+
+        <TextView
+            android:id="@+id/tvDetailsOpen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:layout_marginTop="10dp"
+            android:text=""
+            android:textSize="15sp"
+            android:layout_marginLeft="10dp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@+id/tvDetailsPublicationLabel"
+            app:layout_constraintStart_toEndOf="@+id/tvDetailsOpenLabel"
+            app:layout_constraintVertical_bias="0.506"/>
+
+
+
+
+        <TextView
+            android:id="@+id/tvDetailsUpdatedLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:layout_marginTop="10dp"
+            android:text="Updated date :"
+            android:textSize="15sp"
+            android:layout_marginLeft="10dp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@+id/tvDetailsOpenLabel"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintVertical_bias="0.506"/>
+
+        <TextView
+            android:id="@+id/tvDetailsUpdated"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:layout_marginTop="10dp"
+            android:text=""
+            android:textSize="15sp"
+            android:layout_marginLeft="10dp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@+id/tvDetailsOpenLabel"
+            app:layout_constraintStart_toEndOf="@+id/tvDetailsUpdatedLabel"
+            app:layout_constraintVertical_bias="0.506"/>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>
