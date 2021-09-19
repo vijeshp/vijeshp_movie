@@ -1,23 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/nav_graph"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
     app:startDestination="@id/movieListFragment">
 
     <fragment
         android:id="@+id/movieListFragment"
-        android:name="org.codejudge.application.view.fragments.MovieListFragment"
-        android:label="MovieListFragment" >
+        android:name="com.movie.application.view.fragments.MovieListFragment"
+        android:label="MovieListFragment">
         <action
             android:id="@+id/action_movieListFragment_to_movieDetailsFragment"
             app:destination="@id/movieDetailsFragment" />
     </fragment>
     <fragment
         android:id="@+id/movieDetailsFragment"
-        android:name="org.codejudge.application.view.fragments.MovieDetailsFragment"
-        android:label="MovieDetailsFragment" >
+        android:name="com.movie.application.view.fragments.MovieDetailsFragment"
+        android:label="MovieDetailsFragment">
         <argument
             android:name="selectedIndex"
-            app:argType="integer"
-            android:defaultValue="0" />
+            android:defaultValue="0"
+            app:argType="integer" />
     </fragment>
 </navigation>
