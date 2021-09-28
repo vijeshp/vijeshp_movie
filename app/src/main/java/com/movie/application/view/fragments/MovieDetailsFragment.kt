@@ -7,11 +7,12 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProviders
 import com.bumptech.glide.Glide
+import com.movie.application.R
+import com.movie.application.utilities.EspressoIdlingResource
 import com.movie.application.viewModel.MovieListViewModel
 import com.movie.application.viewModel.ViewModelFactory
 import core.domain.Results
 import kotlinx.android.synthetic.main.fragment_scrolling.*
-import org.codejudge.application.R
 
 class MovieDetailsFragment : Fragment() {
     private lateinit var viewModel: MovieListViewModel
@@ -43,6 +44,7 @@ class MovieDetailsFragment : Fragment() {
             tvDetailsOpen.text = it.opening_date
             tvDetailsUpdated.text = it.date_updated
         }
+        EspressoIdlingResource.decrement()
     }
 
     private fun setupViewModel() {

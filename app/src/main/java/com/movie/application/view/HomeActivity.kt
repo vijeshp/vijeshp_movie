@@ -5,7 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.os.bundleOf
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
-import org.codejudge.application.R
+import com.movie.application.R
 
 class HomeActivity : AppCompatActivity() {
     private lateinit var navController: NavController

@@ -9,13 +9,14 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.movie.application.R
+import com.movie.application.utilities.EspressoIdlingResource
 import com.movie.application.view.HomeActivity
 import com.movie.application.view.adapter.MovieItemAdapter
 import com.movie.application.view.adapter.OnMovieClickListener
 import com.movie.application.viewModel.MovieListViewModel
 import com.movie.application.viewModel.ViewModelFactory
 import kotlinx.android.synthetic.main.movie_list_fragment.*
-import org.codejudge.application.R
 
 /**
  * Fragment to show list of movie
@@ -43,6 +44,7 @@ class MovieListFragment : Fragment() {
         if (viewModel.movieList.value != null)
             return
         if (viewModel.isNetworkAvailable(requireContext())) {
+            EspressoIdlingResource.increment()
             viewModel.fetchMovie()
         } else {
             Toast.makeText(requireContext(), getString(R.string.no_internet), Toast.LENGTH_LONG).show()
@@ -65,6 +67,7 @@ class MovieListFragment : Fragment() {
     private fun setupObservers() {
         viewModel.movieList.observe(viewLifecycleOwner, Observer {
             adapter.setDataSource(it)
+            EspressoIdlingResource.decrement()
         })
         viewModel.isLoading.observe(viewLifecycleOwner, Observer {
             loading_bar.visibility = if (it) View.VISIBLE else View.GONE
@@ -78,6 +81,7 @@ class MovieListFragment : Fragment() {
         adapter = MovieItemAdapter(mutableListOf(), requireContext())
         var clickListener = object : OnMovieClickListener {
             override fun onMovieClick(position: Int) {
+                EspressoIdlingResource.increment()
                 viewModel.selectedMovieIndex.postValue(position)
                 (activity as HomeActivity?)!!.moveToDetailsFragment(position)
             }

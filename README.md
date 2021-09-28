@@ -20,6 +20,14 @@ View -> ViewModel -> Interactors -> repository -> Network layer
 
 </ul>
 
+<B> Unit testing </B>
+<ul>
+<li>Added unit testing for core business logic</li>
+<li>Added Espresso unit testing for UI & Fragment testing</li>
+  </ul>
+
+
+
 
 
 
